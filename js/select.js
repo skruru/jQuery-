@@ -10,9 +10,6 @@ $(function () {
   $('.js-item-to-right').on('click', function () {
     // 選択されているoption(option:selected)を取得
     let $optionSelected = $('#none-selected-items option:selected');
-    if($optionSelected.length === 0) {
-      return; //もし選択されてない場合はキャンセル
-    }
     // 選択を解除
     $optionSelected.prop('selected', false);
     // 選択済みのセレクトボックスに移動
@@ -34,9 +31,6 @@ $(function () {
   $('.js-item-to-left').on('click', function () {
     // 選択されているoption(option:selected)を取得
     let $optionSelected = $('#selected-items option:selected');
-    if($optionSelected.length === 0) {
-      return; //もし選択されてない場合はキャンセル
-    }
     // 選択を解除
     $optionSelected.prop('selected', false);
     // 未選択のセレクトボックスに移動
@@ -70,6 +64,21 @@ $(function () {
       $('.js-item-to-right').prop('disabled', false);
       $('.js-item-to-right-all').prop('disabled', false);
     }
+
+    // $items = $('#selected-items > option').length;
+
+    // switch ($items) {
+    //   case 0:
+    //     $('.js-item-to-left, .js-item-to-left-all').prop('disabled', true);
+    //     break;
+    //   case 9:
+    //     $('.js-item-to-right, .js-item-to-right-all').prop('disabled', true);
+    //     break;
+    //   default:
+    //     $('.js-item-to-left, .js-item-to-left-all, .js-item-to-right, .js-item-to-right-all').prop('disabled', false);
+    // }
+
+    // console.log($items);
 
   };
 

@@ -15,10 +15,10 @@ $(function () {
     // スクロールの速度(ミリ秒)
     const speed = 300;
     // 現在のスクロール位置を取得(windowのscrollTopを取得)
-    const $currentScroll = $(window).scrollTop();
+    const currentScroll = $(window).scrollTop();
     // もし現在のスクロール位置が30を超えていたらトップへ戻るボタンのエレメントをfadeInで表示
     // 30を超えていない場合はfadeOutで非表示
-    if ($currentScroll > 30){
+    if (currentScroll > 30){
       $scrollTop.fadeIn(speed);
     } else {
       $scrollTop.fadeOut(speed);
